@@ -139,7 +139,7 @@ Route::get('siswa', function(){
             echo "<p>Grade : " .$grade. "</p>";
              });*/
 
-             Route::get('/pesan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = null, $minuman = null, $cemilan = null) {
+            /* Route::get('/pesan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = null, $minuman = null, $cemilan = null) {
 
                 if ($makanan && $minuman && $cemilan != null) {
                     return "Anda memesan Makanan = $makanan <br>
@@ -149,9 +149,15 @@ Route::get('siswa', function(){
                      return "Anda memesan Makanan = $makanan <br>
                              Anda memesan Minuman = $minuman";
                  } else if ($makanan || $minuman != null) {
-                     return $makanan != null ? "Anda memesan makanan : $makanan" : "Anda memesan minuman : $minuman";
+                     return $makanan != null ? "Anda Memesan Makanan : $makanan" : "Anda Memesan Minuman : $minuman";
                  } else {
-                     return "Anda tidak memesan apapun silahkan pulang";
+                     return "Anda Tidak Memesan Apapun Silahkan Pulang";
                          }
             
+            });*/
+
+            // menampilkan DATA POSR
+            Route::get('/testmodel', function () {
+                $query = App\models\post::all();
+                return $query;
             });
